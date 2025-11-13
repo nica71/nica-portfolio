@@ -17,32 +17,34 @@ const translations = {
     "about.h2": "Despre mine",
     "about.sub": "Pe scurt despre focus și valoare pentru client.",
     "about.text": "Ajut afacerile să iasă rapid online: interfețe curate, plăți conectate și integrare cu contabilitatea. Îmi plac soluțiile clare și termenele transparente. Proiectez pentru rezultat — ca site-ul să aducă lead-uri și vânzări.",
-    "weather.label": "Acum la Chișinău",
+
     "services.h2": "Servicii",
     "services.sub": "Cinci direcții cu efect rapid.",
-    "services.s1.title": "1. Landing-uri și site-uri1. Crearea site-urilor moderne (Landing, Business, Portfolio",
+    "services.s1.title": "1. Crearea site-urilor moderne (Landing, Business, Portfolio)",
     "services.s11.desc": "— Design curat",
     "services.s12.desc": "— Mobil perfect",
     "services.s13.desc": "— Viteză mare",
     "services.s14.desc": "— SEO de bază inclus",
+
     "services.s2.title": "2. Integrarea AI pentru afaceri",
-    "services.s21.desc": "— Chat-bot pe site ",
+    "services.s21.desc": "— Chat-bot pe site",
     "services.s22.desc": "— Generare texte și răspunsuri automate",
     "services.s23.desc": "— AI pentru formulare, suport clienți și CRM",
-    "services.s24.desc": "— Răspunsuri 24/7 automatizate", 
+    "services.s24.desc": "— Răspunsuri 24/7 automatizate",
+
     "services.s3.title": "3. Integrări API",
     "services.s31.desc": "— Conectarea site-ului la baze de date",
     "services.s32.desc": "— Integrarea cu sisteme de plată (Stripe, PayPal, MAIB, MICB etc.)",
     "services.s33.desc": "— Integrarea OpenAI, Google, Telegram, WhatsApp",
 
     "services.s4.title": "4. Automatizări pentru afaceri",
-    "services.s41.desc": "— Sisteme care lucrează în locul tău", 
-    "services.s42.desc": "— Trimiteri automate", 
-    "services.s43.desc": "— Generarea rapoartelor", 
-    "services.s44.desc": "— Conexiuni între programe", 
+    "services.s41.desc": "— Sisteme care lucrează în locul tău",
+    "services.s42.desc": "— Trimiteri automate",
+    "services.s43.desc": "— Generarea rapoartelor",
+    "services.s44.desc": "— Conexiuni între programe",
 
-    "services.s5.title": "5.Integrare AI & chat-boți",
-    "services.s51.desc": "— Chat AI pe site, asistenți inteligenți pentru clienți și răspunsuri automate 24/7.",   
+    "services.s5.title": "5. Integrare AI & chat-boți",
+    "services.s51.desc": "— Chat AI pe site, asistenți inteligenți pentru clienți și răspunsuri automate 24/7.",
 
     "contact.h2": "Contacte",
     "contact.sub": "Scrie-mi pe canalul potrivit ție.",
@@ -55,9 +57,7 @@ const translations = {
     "contact.fromme.l3": "Predau surse și instrucțiuni de lansare.",
 
     "footer": "© 2025 · NICA Academy · Creat cu ❤️ la Chișinău",
-   
 
-    // mailto (params)
     _mailto_subject: "Cerere site",
     _mailto_body: "Bună, Aurel! Am nevoie de un site...",
     _cta_subject: "Proiect pentru NICA Studio",
@@ -85,11 +85,30 @@ const translations = {
     "services.h2": "Услуги",
     "services.sub": "Три направления с быстрым эффектом.",
     "services.s1.title": "Лендинги и сайты",
-    "services.s1.desc": "Шустрые страницы на HTML/CSS/JS или React. Мобильная адаптация, базовое SEO.",
-    "services.s2.title": "Интеграция платежей",
-    "services.s2.desc": "MAIB/MICB/eCommerce, формы оплаты, уведомления, квитанции.",
-    "services.s3.title": "Автоматизация",
-    "services.s3.desc": "Интеграции 1C 7.7/8.x, обмен с банком, экспорт/импорт, отчёты.",
+    "services.s11.desc": "— Быстрые страницы на HTML/CSS/JS или React",
+    "services.s12.desc": "— Мобильная адаптация",
+    "services.s13.desc": "— Базовое SEO",
+    "services.s14.desc": "— Чистая структура",
+
+    "services.s2.title": "Интеграция AI для бизнеса",
+    "services.s21.desc": "— Чат-бот на сайте (как этот)",
+    "services.s22.desc": "— Автоответы клиентам и генерация текстов",
+    "services.s23.desc": "— Связка AI с формами, CRM и поддержкой",
+    "services.s24.desc": "— Ответы 24/7 без участия человека",
+
+    "services.s3.title": "Интеграция API",
+    "services.s31.desc": "— Связь сайта с базами данных и сервисами",
+    "services.s32.desc": "— Подключение платежей (MAIB, MICB, Stripe, PayPal)",
+    "services.s33.desc": "— OpenAI, Google, Telegram, WhatsApp и др.",
+
+    "services.s4.title": "Автоматизация для бизнеса",
+    "services.s41.desc": "— Системы, которые работают за вас",
+    "services.s42.desc": "— Автоматические рассылки и уведомления",
+    "services.s43.desc": "— Генерация отчётов",
+    "services.s44.desc": "— Связка разных программ и систем",
+
+    "services.s5.title": "Интеграция AI и чат-боты",
+    "services.s51.desc": "— AI-чат на сайте, умные ассистенты и автоответы 24/7.",
 
     "contact.h2": "Контакты",
     "contact.sub": "Свяжитесь со мной удобным способом.",
@@ -128,13 +147,32 @@ const translations = {
     "about.text": "I help businesses get online fast: clean interfaces, payment integration, and accounting links. Clear solutions, transparent timelines, designed for results — leads and sales.",
 
     "services.h2": "Services",
-    "services.sub": "Three quick-impact directions.",
-    "services.s1.title": "Landings & websites",
-    "services.s1.desc": "Fast pages on HTML/CSS/JS or React. Mobile, basic SEO.",
-    "services.s2.title": "Payment integration",
-    "services.s2.desc": "MAIB/MICB/eCommerce, payment forms, notifications, receipts.",
-    "services.s3.title": "Automation",
-    "services.s3.desc": "1C 7.7/8.x, bank sync, data import/export, reports.",
+    "services.sub": "Quick-impact directions.",
+    "services.s1.title": "Landing pages & websites",
+    "services.s11.desc": "— Fast pages on HTML/CSS/JS or React",
+    "services.s12.desc": "— Mobile friendly",
+    "services.s13.desc": "— Basic SEO",
+    "services.s14.desc": "— Clean structure",
+
+    "services.s2.title": "AI integration for business",
+    "services.s21.desc": "— Website chat-bots (like this one)",
+    "services.s22.desc": "— Auto replies and text generation",
+    "services.s23.desc": "— AI for forms, CRM and support",
+    "services.s24.desc": "— 24/7 automated replies",
+
+    "services.s3.title": "API integrations",
+    "services.s31.desc": "— Connect your site to databases and services",
+    "services.s32.desc": "— Payments (MAIB, MICB, Stripe, PayPal)",
+    "services.s33.desc": "— OpenAI, Google, Telegram, WhatsApp",
+
+    "services.s4.title": "Business automation",
+    "services.s41.desc": "— Systems that work for you",
+    "services.s42.desc": "— Automated messages and notifications",
+    "services.s43.desc": "— Reports generation",
+    "services.s44.desc": "— Connecting tools together",
+
+    "services.s5.title": "AI & chat-bots",
+    "services.s51.desc": "— AI chat on your site, smart assistants and 24/7 replies.",
 
     "contact.h2": "Contact",
     "contact.sub": "Write via your preferred channel.",
@@ -158,16 +196,13 @@ const translations = {
 function applyTranslations(lang) {
   const dict = translations[lang] || translations.ro;
 
-  // Текстовые узлы с data-i18n
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (dict[key]) el.textContent = dict[key];
   });
 
-  // Title
   if (dict.title) document.title = dict.title;
 
-  // mailto и CTA с корректными subject/body
   const mailto = document.getElementById("mailto");
   if (mailto && dict._mailto_subject && dict._mailto_body) {
     mailto.href =
@@ -179,25 +214,29 @@ function applyTranslations(lang) {
       `mailto:studio.nica.md@gmail.com?subject=${encodeURIComponent(dict._cta_subject)}&body=${encodeURIComponent(dict._cta_body)}`;
   }
 
-  // Атрибут lang у <html>
   document.documentElement.setAttribute("lang", lang);
 }
 
 function setLang(lang) {
   localStorage.setItem("nica_lang", lang);
   applyTranslations(lang);
+
+  const select = document.getElementById("language-select");
+  if (select) {
+    select.value = lang;
+  }
 }
 
 function initLang() {
   const saved = localStorage.getItem("nica_lang");
-  const lang = saved || "ro"; // baza RO
+  const lang = saved || "ro";
   applyTranslations(lang);
 
-  // Навесим обработчик на кнопки переключателя
-  document.querySelectorAll(".lang-switch [data-lang]").forEach(btn => {
-    btn.addEventListener("click", () => setLang(btn.dataset.lang));
-  });
+  const select = document.getElementById("language-select");
+  if (select) {
+    select.value = lang;
+    select.addEventListener("change", e => setLang(e.target.value));
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initLang);
-

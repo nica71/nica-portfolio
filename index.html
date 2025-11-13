@@ -143,24 +143,38 @@
       <h2 data-i18n="contact.h2">Contacte</h2>
       <p class="sub" data-i18n="contact.sub">Scrie-mi pe canalul potrivit ție.</p>
       <div class="social-icons">
-        <a href="https://wa.me/37369339476" target="_blank" title="WhatsApp">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="viber://chat?number=+37369339476" title="Viber">
-          <i class="fa-brands fa-viber"></i>
-        </a>
-        <a href="https://t.me/+37369339476" target="_blank" title="Telegram">
-          <i class="fa-brands fa-telegram"></i>
-        </a>
-        <a href="https://m.me/@aureliu.nica" target="_blank" title="Messenger">
-          <i class="fa-brands fa-facebook-messenger"></i>
-        </a>
-        <a href="skype: goldenfish_71" title="Skype">
-          <i class="fa-brands fa-skype"></i>
-        </a>
-        <a href="tel:+37369339476" title="Telefon">
-          <i class="fa-solid fa-phone"></i>
-        </a>
+   <div class="social-icons">
+  <!-- WhatsApp: ок -->
+  <a href="https://wa.me/37369339476" target="_blank" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Viber: номер в международном формате, плюс закодирован -->
+  <a href="viber://chat?number=%2B37369339476" title="Viber">
+    <i class="fa-brands fa-viber"></i>
+  </a>
+
+  <!-- Telegram: открываем диалог по номеру (нужно приложение Telegram на телефоне) -->
+  <a href="tg://resolve?phone=37369339476" title="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+
+  <!-- Messenger: без @ -->
+  <a href="https://m.me/aureliu.nica" target="_blank" title="Messenger">
+    <i class="fa-brands fa-facebook-messenger"></i>
+  </a>
+
+  <!-- Skype: без пробела, с параметром chat -->
+  <a href="skype:goldenfish_71?chat" title="Skype">
+    <i class="fa-brands fa-skype"></i>
+  </a>
+
+  <!-- Телефон: на мобильных открывается диалер -->
+  <a href="tel:+37369339476" title="Telefon">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
+
       </div>
 
       <div class="contact">
@@ -207,6 +221,8 @@
       </button>
     </div>
   </div>
+  
+  <script src="i18n.js"></script>
 
  <script>
   async function loadWeather() {
@@ -254,7 +270,7 @@
   }, { threshold: 0.15 });
 
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-
+  
     // URL твоего backend на Render / Railway:
     window.BACKEND_URL = "https://nica-portfolio.onrender.com";
   </script>
