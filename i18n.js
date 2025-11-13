@@ -6,26 +6,43 @@ const translations = {
     "nav.services": "Servicii",
     "nav.contact": "Contacte",
 
-    "hero.badge": "Săptămâna 1 · Carte de vizită",
+    "hero.badge": "Carte de vizită",
     "hero.h1": "Aurel Nica — Web Developer · Integrator",
-    "hero.lead": "Realizez site-uri rapide și clare, conectez plăți și automatizez procese (1C/Bank API). Proiecte — de la landing la mini-eCommerce.",
+    "hero.lead": "Salut! Sunt Aurel Nica — dezvoltator web și integrator AI care ajută afacerile să devină moderne, automate și eficiente.Construiesc site-uri rapide, sisteme inteligente, chat-boți și integrări API pentru companii, freelanceri și echipe care au nevoie de soluții digitale reale.",
     "hero.cta": "Scrie-mi pe email",
-    "hero.point1": "⚡ 3 direcții: landing, plăți, automatizare",
+    "hero.point1": "⚡ 4 direcții: landing, integrarea AI pentru afaceri, integrări API, automatizări pentru afaceri",
     "hero.point2": "🛠 Stack: HTML/CSS/JS · React · Python/Django · PostgreSQL",
     "hero.point3": "🌍 Remote · Chișinău · RO/RU/EN",
 
     "about.h2": "Despre mine",
     "about.sub": "Pe scurt despre focus și valoare pentru client.",
     "about.text": "Ajut afacerile să iasă rapid online: interfețe curate, plăți conectate și integrare cu contabilitatea. Îmi plac soluțiile clare și termenele transparente. Proiectez pentru rezultat — ca site-ul să aducă lead-uri și vânzări.",
-
+    "weather.label": "Acum la Chișinău",
     "services.h2": "Servicii",
-    "services.sub": "Trei direcții cu efect rapid.",
-    "services.s1.title": "Landing-uri și site-uri",
-    "services.s1.desc": "Pagini rapide pe HTML/CSS/JS sau React. Mobile, SEO de bază.",
-    "services.s2.title": "Integrare plăți",
-    "services.s2.desc": "MAIB/MICB/eCommerce, formulare de plată, notificări, chitanțe.",
-    "services.s3.title": "Automatizare",
-    "services.s3.desc": "Integrare 1C 7.7/8.x, schimb cu bancă, export/import date, rapoarte.",
+    "services.sub": "Cinci direcții cu efect rapid.",
+    "services.s1.title": "1. Landing-uri și site-uri1. Crearea site-urilor moderne (Landing, Business, Portfolio",
+    "services.s11.desc": "— Design curat",
+    "services.s12.desc": "— Mobil perfect",
+    "services.s13.desc": "— Viteză mare",
+    "services.s14.desc": "— SEO de bază inclus",
+    "services.s2.title": "2. Integrarea AI pentru afaceri",
+    "services.s21.desc": "— Chat-bot pe site ",
+    "services.s22.desc": "— Generare texte și răspunsuri automate",
+    "services.s23.desc": "— AI pentru formulare, suport clienți și CRM",
+    "services.s24.desc": "— Răspunsuri 24/7 automatizate", 
+    "services.s3.title": "3. Integrări API",
+    "services.s31.desc": "— Conectarea site-ului la baze de date",
+    "services.s32.desc": "— Integrarea cu sisteme de plată (Stripe, PayPal, MAIB, MICB etc.)",
+    "services.s33.desc": "— Integrarea OpenAI, Google, Telegram, WhatsApp",
+
+    "services.s4.title": "4. Automatizări pentru afaceri",
+    "services.s41.desc": "— Sisteme care lucrează în locul tău", 
+    "services.s42.desc": "— Trimiteri automate", 
+    "services.s43.desc": "— Generarea rapoartelor", 
+    "services.s44.desc": "— Conexiuni între programe", 
+
+    "services.s5.title": "5.Integrare AI & chat-boți",
+    "services.s51.desc": "— Chat AI pe site, asistenți inteligenți pentru clienți și răspunsuri automate 24/7.",   
 
     "contact.h2": "Contacte",
     "contact.sub": "Scrie-mi pe canalul potrivit ție.",
@@ -38,6 +55,7 @@ const translations = {
     "contact.fromme.l3": "Predau surse și instrucțiuni de lansare.",
 
     "footer": "© 2025 · NICA Academy · Creat cu ❤️ la Chișinău",
+   
 
     // mailto (params)
     _mailto_subject: "Cerere site",
