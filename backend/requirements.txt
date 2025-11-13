@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 flask
 flask-cors
 openai
 requests
+=======
+flask
+flask-cors
+openai
+requests
+>>>>>>> b42a430ae52cd3d8c2e04d54e7f99e7edad3bd54
