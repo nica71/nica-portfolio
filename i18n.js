@@ -10,7 +10,7 @@ const translations = {
     "hero.h1": "Aurel Nica — Web Developer · Integrator",
     "hero.lead": "Salut! Sunt Aurel Nica — dezvoltator web și integrator AI care ajută afacerile să devină moderne, automate și eficiente.Construiesc site-uri rapide, sisteme inteligente, chat-boți și integrări API pentru companii, freelanceri și echipe care au nevoie de soluții digitale reale.",
     "hero.cta": "Scrie-mi pe email",
-    "hero.point1": "⚡ 5 direcții: landing, integrarea AI pentru afaceri, integrări API, automatizări pentru afaceri",
+    "hero.point1": "⚡ Top direcții: landing, integrarea AI pentru afaceri, integrări API, automatizări pentru afaceri",
     "hero.point2": "🛠 Stack: HTML/CSS/JS · React · Python/Django · PostgreSQL",
     "hero.point3": "🌍 Remote · Chișinău · RO/RU/EN",
 
@@ -77,9 +77,9 @@ const translations = {
 
     "hero.badge": " Визитка разработчика",
     "hero.h1": "Aurel Nica — Web Developer · Integrator",
-    "hero.lead": "Делаю быстрые и понятные сайты, подключаю платежи и автоматизирую процессы (1C/Bank API). Проекты — от лендинга до мини-eCommerce.",
+    "hero.lead": "Привет! Меня зовут Аурел Ника, я веб-разработчик и интегратор искусственного интеллекта, который помогает компаниям стать современными, автоматизированными и эффективными. Я создаю быстрые веб-сайты, интеллектуальные системы, чат-боты и интегрирую API для компаний, фрилансеров и команд, которым нужны настоящие цифровые решения.",
     "hero.cta": "Связаться по email",
-    "hero.point1": "⚡ 5 направлений: лендинг, интеграция ИИ для бизнеса, интеграция API, автоматизация бизнеса",
+    "hero.point1": "⚡ Топ направления: лендинг, интеграция ИИ для бизнеса, интеграция API, автоматизация бизнеса",
     "hero.point2": "🛠 Стек: HTML/CSS/JS · React · Python/Django · PostgreSQL",
     "hero.point3": "🌍 Удалённо · Кишинёв · RO/RU/EN",
 
@@ -146,9 +146,9 @@ const translations = {
 
     "hero.badge": "Week 1 · Business Card",
     "hero.h1": "Aurel Nica — Web Developer · Integrator",
-    "hero.lead": "I build fast, clear sites, connect payments, and automate processes (1C/Bank API). From landing pages to mini eCommerce.",
+    "hero.lead": "Hello! I'm Aurel Nica — a web developer and AI integrator who helps businesses become modern, automated, and efficient. I build fast websites, intelligent systems, chatbots, and API integrations for companies, freelancers, and teams that need real digital solutions.",
     "hero.cta": "Email me",
-    "hero.point1": "⚡ 5 directions: landing, AI integration for business, API integrations, business automation",
+    "hero.point1": "⚡ Top directions: landing, AI integration for business, API integrations, business automation",
     "hero.point2": "🛠 Stack: HTML/CSS/JS · React · Python/Django · PostgreSQL",
     "hero.point3": "🌍 Remote · Chișinău · RO/RU/EN",
 
@@ -183,6 +183,7 @@ const translations = {
 
     "services.s5.title": "AI & chat-bots",
     "services.s51.desc": "— AI chat on your site, smart assistants and 24/7 replies.",
+    
 
     "location.h2": "Where I work & the weather now",
     "location.sub": "I work remotely from Chisinau, but I collaborate with clients from any country.",
