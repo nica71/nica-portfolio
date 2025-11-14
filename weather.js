@@ -35,35 +35,39 @@ async function loadWeather() {
     if (!res.ok) throw new Error("Bad response");
 
     const data = await res.json();
-    const el = document.getElementById("weather-status");
-    if (!el) return;
 
-    const temp = data.temperature;
-    const wind = data.windspeed;
-    const hum = data.humidity;
+    const tempEl  = document.getElementById("weather-temp");
+    const extraEl = document.getElementById("weather-extra");
+    if (!tempEl || !extraEl) return;
+
+    const temp  = data.temperature;
+    const wind  = data.windspeed;
+    const hum   = data.humidity;
     const cloud = data.cloudcover ?? 0;
-    const code = data.weathercode ?? 0;
+    const code  = data.weathercode ?? 0;
     const isDay = data.is_day;
 
     if (temp === undefined || temp === null) {
-      el.textContent = "Nu pot încărca meteo acum.";
+      extraEl.textContent = "Nu pot încărca meteo acum.";
       return;
     }
 
     const desc = describeWeather(code, cloud);
     const icon = pickIcon(isDay, code, cloud);
 
-    // Живой, но нейтральный текст
+    // В верхней строке показываем иконку + температуру
+    tempEl.textContent = `${icon} ${temp}°C`;
+
+    // В нижней строке — влажность, ветер и описание
     let parts = [];
-    parts.push(`${icon} ${temp}°C`);
-    if (typeof hum === "number") parts.push(`umiditate ${hum}%`);
+    if (typeof hum === "number")  parts.push(`umiditate ${hum}%`);
     if (typeof wind === "number") parts.push(`vânt ${wind} m/s`);
     parts.push(desc);
 
-    el.textContent = parts.join(" · ");
+    extraEl.textContent = parts.join(" · ");
   } catch (e) {
-    const el = document.getElementById("weather-status");
-    if (el) el.textContent = "Nu pot încărca meteo acum.";
+    const extraEl = document.getElementById("weather-extra");
+    if (extraEl) extraEl.textContent = "Nu pot încărca meteo acum.";
   }
 }
 
