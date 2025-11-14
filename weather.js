@@ -1,5 +1,5 @@
 function describeWeather(code, cloudcover) {
-  // very simplified mapping for Open-Meteo weather codes
+  // очень упрощённое описание по Open-Meteo weather codes
   if (code === 0) return "cer senin";
   if (code === 1 || code === 2 || code === 3) {
     if (cloudcover >= 70) return "cer noros";
@@ -17,6 +17,7 @@ function describeWeather(code, cloudcover) {
 
 function pickIcon(is_day, code, cloudcover) {
   const day = is_day === 1 || is_day === true;
+
   if (code === 0 && cloudcover < 30) return day ? "☀️" : "🌙";
   if (code >= 80 && code <= 82) return "🌧️";
   if (code >= 95) return "⛈️";
@@ -52,7 +53,7 @@ async function loadWeather() {
     const desc = describeWeather(code, cloud);
     const icon = pickIcon(isDay, code, cloud);
 
-    // Старался сделать нейтральный, но живой текст
+    // Живой, но нейтральный текст
     let parts = [];
     parts.push(`${icon} ${temp}°C`);
     if (typeof hum === "number") parts.push(`umiditate ${hum}%`);

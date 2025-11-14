@@ -125,7 +125,7 @@
           <p id="weather-extra">Încărcare meteo…</p>
         </div>
 
-      <div class="map-wrap">
+       <div class="map-wrap">
         <iframe
           title="Harta Chișinău"
          src="https://www.openstreetmap.org/export/embed.html?bbox=28.80%2C46.98%2C28.92%2C47.04&layer=mapnik&marker=47.01%2C28.86"
@@ -133,9 +133,9 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+       </div>
       </div>
-    </div>
-    </section>
+   </section>
 
 
 
@@ -199,82 +199,46 @@
     <div class="container" data-i18n="footer">© 2025 · NICA Academy · Creat cu ❤️ la Chișinău</div>
   </footer>
 
- <!-- === AI Chat Widget === -->
-  <button id="ai-chat-toggle" aria-label="Chat with AI">
-    <i class="fa-solid fa-robot"></i>
-  </button>
+   <footer>
+    <div class="container" data-i18n="footer">© 2025 · NICA Academy · Creat cu ❤️ la Chișinău</div>
+  </footer>
 
-  <div id="ai-chat-modal">
-    <div id="ai-chat-header">
-      NICA AI Assistant
-      <button id="ai-chat-close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
-
-    <div id="ai-chat-body"></div>
-
-    <div id="ai-chat-input">
-      <input id="ai-chat-text" placeholder="Întreabă ceva… / Спросите что-то…">
-      <button id="ai-chat-send">
-        <i class="fa-solid fa-paper-plane"></i>
-      </button>
-    </div>
-  </div>
-  
+  <!-- i18n -->
   <script src="i18n.js"></script>
 
- <script>
-  async function loadWeather() {
-    const card   = document.getElementById('weather-card');
-    const tempEl = document.getElementById('weather-temp');
-    const extraEl= document.getElementById('weather-extra');
-
-    if (!card || !window.BACKEND_URL) return;
-
-    try {
-      const res  = await fetch(`${window.BACKEND_URL}/api/weather`);
-      const data = await res.json();
-
-      if (data && data.temperature != null) {
-        tempEl.textContent  = data.temperature + '°C';
-        extraEl.textContent = 'Vânt: ' + (data.windspeed ?? '?') + ' km/h';
-      } else {
-        extraEl.textContent = 'Nu sunt date / Нет данных';
-      }
-    } catch (e) {
-      extraEl.textContent = 'Eroare / Ошибка la încărcare';
-    }
-  }
-
-  // language select wiring
-  document.addEventListener('DOMContentLoaded', () => {
-    const select = document.getElementById('language-select');
-    if (select) {
-      const saved = localStorage.getItem('nica_lang') || 'ro';
-      select.value = saved;
-      select.addEventListener('change', e => setLang(e.target.value));
-    }
-
-    loadWeather(); // ← вызываем погоду при загрузке
-  });
-
-  // scroll reveal for sections
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-  
-    // URL твоего backend на Render / Railway:
+  <!-- URL backend-а -->
+  <script>
     window.BACKEND_URL = "https://nica-portfolio.onrender.com";
   </script>
+
+  <!-- Погода с эмодзи -->
   <script src="weather.js"></script>
+
+  <!-- Твой существующий код (языки + scroll reveal) -->
+  <script>
+    // language select wiring
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.getElementById('language-select');
+      if (select) {
+        const saved = localStorage.getItem('nica_lang') || 'ro';
+        select.value = saved;
+        select.addEventListener('change', e => setLang(e.target.value));
+      }
+    });
+
+    // scroll reveal for sections
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+
   <script src="chat.js"></script>
 </body>
 </html>
