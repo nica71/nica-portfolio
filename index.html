@@ -219,16 +219,16 @@
     </div>
   </div>
   
-  <script src="i18n.js"></script>
-    <script src="weather.js"></script>
-   <footer>
-    <div class="container" data-i18n="footer">© 2025 · NICA Academy · Creat cu ❤️ la Chișinău</div>
+    <footer>
+    <div class="container" data-i18n="footer">
+      © 2025 · NICA Academy · Creat cu ❤️ la Chișinău
+    </div>
   </footer>
 
-  <!-- i18n -->
+  <!-- i18n: переводы и функции setLang/applyTranslations -->
   <script src="i18n.js"></script>
 
-  <!-- URL backend-а -->
+  <!-- URL backend-а: ОБЯЗАТЕЛЬНО до weather.js и chat.js -->
   <script>
     window.BACKEND_URL = "https://nica-portfolio.onrender.com";
   </script>
@@ -236,31 +236,42 @@
   <!-- Погода с эмодзи -->
   <script src="weather.js"></script>
 
-  <!-- Твой существующий код (языки + scroll reveal) -->
-  <script>
-    // language select wiring
-    document.addEventListener('DOMContentLoaded', () => {
-      const select = document.getElementById('language-select');
-      if (select) {
-        const saved = localStorage.getItem('nica_lang') || 'ro';
-        select.value = saved;
-        select.addEventListener('change', e => setLang(e.target.value));
-      }
-    });
-
-    // scroll reveal for sections
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-  </script>
-
+  <!-- AI-чат (если подключен) -->
   <script src="chat.js"></script>
+
+  <!-- Общая логика страницы: язык (select) + scroll reveal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Язык по умолчанию из localStorage или 'ro'
+      const select = document.getElementById('language-select');
+      const savedLang = localStorage.getItem('nica_lang') || 'ro';
+
+      if (select) {
+        select.value = savedLang;
+        select.addEventListener('change', (e) => {
+          // setLang() берётся из i18n.js
+          setLang(e.target.value);
+        });
+      }
+
+      // Если по какой-то причине i18n.js ещё не применил язык —
+      // принудительно применим
+      if (typeof applyTranslations === 'function') {
+        applyTranslations(savedLang);
+      }
+
+      // 2) Scroll reveal
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    });
+  </script>
 </body>
 </html>
