@@ -58,3 +58,21 @@ async function askAI(text) {
   }
 }
 
+// Отправка по кнопке
+send.onclick = () => {
+  const text = input.value.trim();
+  if (text) {
+    askAI(text);
+  }
+};
+
+// Отправка по Enter
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (text) {
+      askAI(text);
+    }
+  }
+});
