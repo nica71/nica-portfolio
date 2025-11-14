@@ -113,28 +113,30 @@
     </section>
 
     <section id="location" class="reveal">
-      <h2 data-i18n="location.h2"> Unde lucrez & vremea acum</h2>
-      <p class="sub" data-i18n="location.sub">
-        Lucrez remote din Chișinău, dar colaborez cu clienți din orice țară.
-      </p>
+        <h2>Unde lucrez & vremea acum</h2>
+        <p class="sub">
+         Lucrez remote din Chișinău, dar colaborez cu clienți din orice țară.
+        </p>
 
       <div class="location-grid">
-        <div class="panel">
-          <h3 data-i18n="location.h3">Chișinău, Moldova</h3>
-          <p id="weather-status" data-i18n="location.status">Încărcare meteo…</p>
+        <div class="panel" id="weather-card">
+          <h3>Chișinău, Moldova</h3>
+          <p id="weather-temp">--°C</p>
+          <p id="weather-extra">Încărcare meteo…</p>
         </div>
 
-        <div class="map-wrap">
-          <iframe
-            title="Harta Chișinău"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=28.80%2C46.98%2C28.92%2C47.04&layer=mapnik&marker=47.01%2C28.86"
-            style="border:0;"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+      <div class="map-wrap">
+        <iframe
+          title="Harta Chișinău"
+         src="https://www.openstreetmap.org/export/embed.html?bbox=28.80%2C46.98%2C28.92%2C47.04&layer=mapnik&marker=47.01%2C28.86"
+         style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
       </div>
     </section>
+
 
 
     <section id="contact" class="reveal">
@@ -272,7 +274,6 @@
     // URL твоего backend на Render / Railway:
     window.BACKEND_URL = "https://nica-portfolio.onrender.com";
   </script>
-  <script src="weather.js"></script>
   <script src="chat.js"></script>
 </body>
 </html>
