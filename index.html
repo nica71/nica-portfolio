@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Carte de vizită Aurel Nica — NICA Academy Week 1" />
+  <title data-i18n="title">NICA Academy — Carte de vită Aurel Nica</title>
+  <link href="img/logo.png" rel="icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <div class="logo" aria-hidden="true"></div>
+        <span>NICA Academy</span>
+      </a>
+      <nav class="links">
+        <a href="#about" data-i18n="nav.about">Despre mine</a>
+        <a href="#services" data-i18n="nav.services">Servicii</a>
+        <a href="#contact" data-i18n="nav.contact">Contacte</a>
+      <div class="lang-select">
+        <i class="fa-solid fa-globe"></i>
+          <select id="language-select" aria-label="Selectează limba">
+          <option value="ro">RO</option>
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+
+
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+  <section class="hero reveal">
+  <div class="card">
+    <span class="badge" data-i18n="hero.badge">Carte de vizită</span>
+    <!-- Large profile photo in hero -->
+    <img src="img/aurel.jpg" alt="Aurel Nica" class="profile-photo-lg" loading="eager">
+
+    <h1 data-i18n="hero.h1">
+      Aurel Nica — Web Developer & Integrator AI
+    </h1>
+
+    <p data-i18n="hero.lead">
+      Construiesc site-uri moderne, conectez plăți online și implementez chat-boți AI pentru afaceri.
+      Totul simplu, clar și orientat spre rezultat.
+    </p>
+
+    <ul class="hero-bullets" data-i18n="hero.bullets">
+      <li data-i18n="hero.bullets1">✔ Landing / Business / Portfolio</li>
+      <li data-i18n="hero.bullets2">✔ AI Chat pe site – asistent 24/7</li>
+      <li data-i18n="hero.bullets3">✔ Integrări API: plăți, CRM, formulare, 1C</li>
+    </ul>
+
+    <div class="hero-cta">
+      <a
+        class="cta"
+        id="cta-email"
+        data-i18n="hero.cta"
+        href="mailto:webartoptimus@gmail.com?subject=Proiect%20pentru%20NICA%20Studio&body=Bună,%20Aurel!%20Aș%20dori%20să%20discut%20un%20proiect..."
+      >
+        Scrie-mi pe email
+      </a>
+
+      <button id="hero-ai-chat" class="btn ghost" type="button" >
+       <a data-i18n="hero.chat">
+        💬 Întreabă AI despre proiectul tău        
+       </a>
+      </button>
+    </div>
+  </div>
+
+  <aside class="hero-aside">
+    <div class="stat" data-i18n="hero.point1">
+      ⚡ 5 direcții reale: site, plăți, AI, API, automatizări
+    </div>
+    <div class="stat" data-i18n="hero.point2">
+      🛠 Stack: HTML/CSS/JS · React · Python/Django · PostgreSQL
+    </div>
+    <div class="stat" data-i18n="hero.point3">
+      🌍 Remote · Chișinău · RO/RU/EN
+    </div>
+  </aside>
+</section>
+
+
+
+
+    <section id="about" class="reveal">
+      <h2 data-i18n="about.h2">Despre mine</h2>
+      <p class="sub" data-i18n="about.sub">Sunt Aurel Nica — dezvoltator web și integrator AI 
+        care ajută afacerile să devină moderne, automate și eficiente.
+        Construiesc site-uri rapide, sisteme inteligente, chat-boți și integrări API pentru companii, 
+        freelanceri și echipe care au nevoie de soluții digitale reale.</p>
+
+      <div class="about-wrap">
+        <img src="img/features-bg.jpg" alt="Aurel Nica" class="about-photo">
+        <div class="about-text">
+         <p data-i18n="about.text">
+            Ajut afacerile să iasă rapid online: interfețe curate, plăți conectate și integrare cu contabilitatea…
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+  <section id="process" class="reveal">
+  <div class="container">
+    <h2 data-i18n="process.h2">Cum lucrăm</h2>
+    <p class="sub" data-i18n="process.sub">Proces rapid și clar, în 4 pași simpli.</p>
+
+    <div class="process-grid">
+      <article class="process-step">
+        <span class="step-num">1</span>
+        <h3 data-i18n="process.1.title">Discuție</h3>
+        <p data-i18n="process.1.text">Îmi spui ideea ta: tip site, funcționalitate, public.</p>
+      </article>
+
+      <article class="process-step">
+        <span class="step-num">2</span>
+        <h3 data-i18n="process.2.title">Structură și propunere</h3>
+        <p data-i18n="process.2.text">Îți propun structură, timp estimativ și soluții potrivite.</p>
+      </article>
+
+      <article class="process-step">
+        <span class="step-num">3</span>
+        <h3 data-i18n="process.3.title">Dezvoltare</h3>
+        <p data-i18n="process.3.text">Construiesc site-ul + AI (dacă vrei), testăm împreună.</p>
+      </article>
+
+      <article class="process-step">
+        <span class="step-num">4</span>
+        <h3 data-i18n="process.4.title">Lansare & suport</h3>
+        <p data-i18n="process.4.text">Lansăm, ajustăm și predau instrucțiuni clare.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section id="services" class="reveal">
+      <h2 data-i18n="services.h2">Servicii</h2>
+      <p class="sub" data-i18n="services.sub">Cinci direcții cu efect rapid.</p>
+
+      <div class="services-flex">
+        <article class="service-card">
+          <h3 data-i18n="services.s1.title">1. Crearea site-urilor moderne (Landing, Business, Portfolio)</h3>
+          <p data-i18n="services.s11.desc">— Design curat</p>
+          <p data-i18n="services.s12.desc">— Mobil perfect</p>
+          <p data-i18n="services.s13.desc">— Viteză mare</p>
+          <p data-i18n="services.s14.desc">— SEO de bază inclus</p>
+        </article>
+
+        <article class="service-card">
+          <h3 data-i18n="services.s2.title">2. Integrarea AI pentru afaceri</h3>
+          <p data-i18n="services.s21.desc">— Chat-bot pe site (ca exemplul tău!)</p>
+          <p data-i18n="services.s22.desc">— Generare texte și răspunsuri automate</p>
+          <p data-i18n="services.s23.desc">— AI pentru formulare, suport clienți și CRM</p>
+          <p data-i18n="services.s24.desc">— Răspunsuri 24/7 automatizate</p>
+       </article>
+
+        <article class="service-card">
+          <h3 data-i18n="services.s3.title">3. Integrări API</h3>
+          <p data-i18n="services.s31.desc">— Conectarea site-ului la baze de date</p>
+          <p data-i18n="services.s32.desc">— Integrarea cu sisteme de plată (Stripe, PayPal, MAIB, MICB etc.)</p>
+          <p data-i18n="services.s33.desc">— Integrarea OpenAI, Google, Telegram, WhatsApp</p>
+        </article>
+
+        <article class="service-card">
+          <h3 data-i18n="services.s4.title">4. Automatizări pentru afaceri</h3>
+          <p data-i18n="services.s41.desc">— Sisteme care lucrează în locul tău</p>
+          <p data-i18n="services.s42.desc">— Trimiteri automate</p>
+          <p data-i18n="services.s43.desc">— Generarea rapoartelor</p>
+          <p data-i18n="services.s44.desc">— Conexiuni între programe</p>
+        </article>
+
+          <article class="service-card">
+          <h3 data-i18n="services.s5.title">5.Integrare AI & chat-boți</h3>
+          <p data-i18n="services.s51.desc"> — Chat AI pe site, asistenți inteligenți pentru clienți și răspunsuri automate 24/7.</p>
+        </article>
+
+        
+      </div>
+    </section>
+
+   <section id="why-me" class="reveal">
+  <div class="container">
+    <h2 data-i18n="why.h2">De ce să lucrăm împreună</h2>
+    <p class="sub" data-i18n="why.sub">
+      Nu ești tratat ca „încă un client”, ci ca un proiect real care trebuie să iasă bine.
+    </p>
+
+    <div class="why-grid">
+      <article class="why-item">
+        <h3 data-i18n="why.1.title">Abordare personală</h3>
+        <p data-i18n="why.1.text">Discut direct cu tine, fără manageri sau agenții.</p>
+      </article>
+
+      <article class="why-item">
+        <h3 data-i18n="why.2.title">Experiență reală</h3>
+        <p data-i18n="why.2.text">Automatizări, plăți, AI, API — nu „teorie”, ci proiecte reale.</p>
+      </article>
+
+      <article class="why-item">
+        <h3 data-i18n="why.3.title">Simplitate</h3>
+        <p data-i18n="why.3.text">Fără sisteme umflate — doar ce ai nevoie cu adevărat.</p>
+      </article>
+
+      <article class="why-item">
+        <h3 data-i18n="why.4.title">Transparență</h3>
+        <p data-i18n="why.4.text">Îți explic sincer unde poți economisi și ce merită făcut.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <section id="location" class="reveal">
+      <h2 data-i18n="location.h2">Unde lucrez & vremea acum</h2>
+      <p class="sub" data-i18n="location.sub">
+        Lucrez remote din Chișinău, dar colaborez cu clienți din orice țară.
+      </p>
+
+      <div class="location-grid">
+      <div class="panel" id="weather-card">
+        <h3 data-i18n="location.h3">Chișinău, Moldova</h3>
+        <p id="weather-temp">--°C</p>
+        <p id="weather-extra" data-i18n="location.status">Încărcare meteo…</p>
+      </div>
+    
+
+
+       <div class="map-wrap">
+        <iframe
+          title="Harta Chișinău"
+         src="https://www.openstreetmap.org/export/embed.html?bbox=28.80%2C46.98%2C28.92%2C47.04&layer=mapnik&marker=47.01%2C28.86"
+         style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+       </div>
+      </div>
+   </section>
+
+
+
+    <section id="contact" class="reveal">
+      <h2 data-i18n="contact.h2">Contacte</h2>
+      <p class="sub" data-i18n="contact.sub">Scrie-mi pe canalul potrivit ție.</p>
+      <div class="social-icons">
+   <div class="social-icons">
+  <!-- WhatsApp: ок -->
+  <a href="https://wa.me/37369339476" target="_blank" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Viber: номер в международном формате, плюс закодирован -->
+  <a href="viber://chat?number=%2B37369339476" title="Viber">
+    <i class="fa-brands fa-viber"></i>
+  </a>
+
+  <!-- Telegram: открываем диалог по номеру (нужно приложение Telegram на телефоне) -->
+  <a href="tg://resolve?phone=37369339476" title="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+
+  <!-- Messenger: без @ -->
+  <a href="https://m.me/aureliu.nica" target="_blank" title="Messenger">
+    <i class="fa-brands fa-facebook-messenger"></i>
+  </a>
+
+  <!-- Skype: без пробела, с параметром chat -->
+  <a href="skype:goldenfish_71?chat" title="Skype">
+    <i class="fa-brands fa-skype"></i>
+  </a>
+
+  <!-- Телефон: на мобильных открывается диалер -->
+  <a href="tel:+37369339476" title="Telefon">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
+
+      </div>
+
+      <div class="contact">
+        <div class="panel">
+          <h3 data-i18n="contact.mail.h3">Email</h3>
+          <p class="muted" data-i18n="contact.mail.note">Răspuns de obicei în ziua lucrătoare.</p>
+          <a class="mailto" id="mailto" data-i18n="contact.mail.cta" href="mailto:studio.nica.md@gmail.com?subject=Cerere%20site&body=Bună,%20Aurel!%20Am%20nevoie%20de%20un%20site...">Trimite email</a>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="contact.fromme.h3">De la mine</h3>
+          <ul class="list">
+            <li data-i18n="contact.fromme.l1">Te ajut să formulezi cerințele și prioritățile.</li>
+            <li data-i18n="contact.fromme.l2">Plan clar și preț fix la start.</li>
+            <li data-i18n="contact.fromme.l3">Predau surse și instrucțiuni de lansare.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+ <!-- === AI Chat Widget === -->
+  <button id="ai-chat-toggle" aria-label="Chat with AI">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <div id="ai-chat-modal">
+    <div id="ai-chat-header">
+      NICA AI Assistant
+      <button id="ai-chat-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div id="ai-chat-body"></div>
+
+    <div id="ai-chat-input">
+      <input id="ai-chat-text" placeholder="Întreabă ceva… / Спросите что-то…">
+      <button id="ai-chat-send">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+  
+    <footer>
+    <div class="container" data-i18n="footer">
+      © 2025 · NICA Academy · Creat cu ❤️ la Chișinău
+    </div>
+  </footer>
+
+  <!-- i18n: переводы и функции setLang/applyTranslations -->
+  <script src="i18n.js"></script>
+
+  <!-- URL backend-а: ОБЯЗАТЕЛЬНО до weather.js и chat.js -->
+  <script>
+    window.BACKEND_URL = "https://nica-portfolio.onrender.com";
+  </script>
+
+  <!-- Погода с эмодзи -->
+  <script src="weather.js"></script>
+
+  <!-- AI-чат (если подключен) -->
+  <script src="chat.js"></script>
+
+  <!-- Общая логика страницы: язык (select) + scroll reveal -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // scroll reveal for sections
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // если есть кнопка hero-ai-chat — она открывает виджет чата
+    const heroBtn = document.getElementById('hero-ai-chat');
+    const chatToggle = document.getElementById('ai-chat-toggle');
+    if (heroBtn && chatToggle) {
+      heroBtn.addEventListener('click', () => {
+        chatToggle.click();
+      });
+    }
+  });
+</script>
+
+
+</body>
+</html>
