@@ -2,6 +2,7 @@
 
 const translations = {
   ro: {
+    
     // --- HEAD / NAV ---
     "title": "NICA Academy — Carte de vizita Aurel Nica",
     "nav.about": "Despre mine",

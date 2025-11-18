@@ -248,6 +248,7 @@ function isDaytime() {
 
 /* ===== Инициализация и реакция на смену языка ===== */
 
+
 // Авто-загрузка погоды после загрузки DOM
 document.addEventListener("DOMContentLoaded", () => {
   loadWeather(true);
