@@ -22,10 +22,10 @@ async function loadWeather(forceRefetch = false) {
   extraEl.textContent = getWeatherLoadingText();
 
   try {
-    // Прямой запрос к Open-Meteo, без backend
+    // Прямой запрос к Open-Meteo, без backend  47.044624%2C28.862221
     const url =
       "https://api.open-meteo.com/v1/forecast" +
-      "?latitude=47.01&longitude=28.86" +
+      "?latitude=47.045&longitude=28.862" +
       "&current_weather=true" +
       "&hourly=relativehumidity_2m,cloudcover";
 
