@@ -162,7 +162,7 @@ const translations = {
 
     "services.s2.title": "2. Внедрение AI для бизнеса",
     "services.s21.desc":
-      "— Чат-бот на сайте (как в твоём примере)",
+      "— Чат-бот на сайте (на странице - как пример!)",
     "services.s22.desc":
       "— Генерация текстов и автоматические ответы",
     "services.s23.desc":
@@ -300,7 +300,7 @@ const translations = {
 
     "services.s2.title": "2. AI integration for business",
     "services.s21.desc":
-      "— Website chat-bot (like your demo)",
+      "— Website chat-bot (like my demo)",
     "services.s22.desc":
       "— Text generation and auto-replies",
     "services.s23.desc":
