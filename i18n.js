@@ -42,7 +42,7 @@ const translations = {
     "services.s14.desc": "— SEO de bază inclus",
 
     "services.s2.title": "2. Integrarea AI pentru afaceri",
-    "services.s21.desc": "— Chat-bot pe site (ca exemplul tău!)",
+    "services.s21.desc": "— Chat-bot pe site (exemplu aici pe pagină!)",
     "services.s22.desc": "— Generare texte și răspunsuri automate",
     "services.s23.desc": "— AI pentru formulare, suport clienți și CRM",
     "services.s24.desc": "— Răspunsuri 24/7 automatizate",
