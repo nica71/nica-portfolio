@@ -392,19 +392,55 @@ const translations = {
   }
 };
 
-let currentLang = "ro";
+//let currentLang = "ro";
+// Какие языки реально есть на сайте
+const supportedLangs = ["ro", "ru", "en"];
+
+function getInitialLanguage() {
+  // 1. Если пользователь уже что-то выбирал — уважаем его выбор
+  const saved = localStorage.getItem("lang");
+  if (saved && supportedLangs.includes(saved)) {
+    return saved;
+  }
+
+  // 2. Берём язык браузера / устройства
+  let browserLang = "en";
+
+  if (typeof navigator !== "undefined") {
+    browserLang =
+      (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    // например "ru-RU" → режем до "ru"
+    browserLang = browserLang.slice(0, 2);
+  }
+
+  // 3. Если у нас есть такой язык — используем его, иначе — "en"
+  if (supportedLangs.includes(browserLang)) {
+    return browserLang;
+  }
+
+  return "en";
+}
+
+
+
 
 function applyTranslations(lang) {
   const dict = translations[lang] || translations.ro;
 
   // Текстовые узлы по data-i18n
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    const text = dict[key];
-    if (typeof text !== "undefined") {
-      el.innerHTML = text;
-    }
+ document.querySelectorAll("[data-lang]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    if (!supportedLangs.includes(lang)) return;
+
+    // 1. Сохраняем выбор пользователя
+    localStorage.setItem("lang", lang);
+
+    // 2. Применяем язык
+    setLanguage(lang);
   });
+});
+
 
   // Обновляем mailto-ссылки под язык
   const mailto = document.getElementById("mailto");
@@ -431,7 +467,8 @@ function applyTranslations(lang) {
 
 function setLang(lang) {
   if (!translations[lang]) {
-    lang = "ro";
+    lang = getInitialLanguage();
+    //"ro";
   }
 
   // запоминаем выбор
@@ -450,10 +487,10 @@ function setLang(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // читаем сохранённый язык или RO по умолчанию
-  let saved = "ro";
+  // читаем сохранённый язык или RO по умолчанию"ro";
+  let saved = getInitialLanguage();
   try {
-    saved = localStorage.getItem("nica_lang") || "ro";
+    saved = localStorage.getItem("nica_lang") || "en";
   } catch (e) {}
 
   // применяем переводы при загрузке
