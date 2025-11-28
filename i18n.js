@@ -99,7 +99,7 @@ const translations = {
     "contact.h2": "Contacte",
     "contact.sub": "Scrie-mi pe canalul potrivit ție.",
     "contact.mail.h3": "Email",
-    "contact.mail.note": "Răspuns de obicei în ziua lucrătoare.",
+    "contact.mail.note": "De obicei, răspund în termen de o zi lucrătoare.",
     "contact.mail.cta": "Trimite email",
     "contact.fromme.h3": "De la mine",
     "contact.fromme.l1":
@@ -235,7 +235,7 @@ const translations = {
       "Напишите мне тем способом, который вам удобен.",
     "contact.mail.h3": "Email",
     "contact.mail.note":
-      "Обычно отвечаю в тот же рабочий день.",
+      "Обычно я отвечаю в течение одного рабочего дня.",
     "contact.mail.cta": "Написать письмо",
     "contact.fromme.h3": "Со своей стороны",
     "contact.fromme.l1":
