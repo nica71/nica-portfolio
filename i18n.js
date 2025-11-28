@@ -393,14 +393,22 @@ const translations = {
 };
 
 //let currentLang = "ro";
+
+
 // Какие языки реально есть на сайте
 const supportedLangs = ["ro", "ru", "en"];
+const STORAGE_KEY = "nica_lang";
 
+// Определяем стартовый язык
 function getInitialLanguage() {
   // 1. Если пользователь уже что-то выбирал — уважаем его выбор
-  const saved = localStorage.getItem("lang");
-  if (saved && supportedLangs.includes(saved)) {
-    return saved;
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved && supportedLangs.includes(saved)) {
+      return saved;
+    }
+  } catch (e) {
+    // localStorage недоступен — игнорируем
   }
 
   // 2. Берём язык браузера / устройства
@@ -409,11 +417,11 @@ function getInitialLanguage() {
   if (typeof navigator !== "undefined") {
     browserLang =
       (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    // например "ru-RU" → режем до "ru"
+    // например "ru-RU" → "ru"
     browserLang = browserLang.slice(0, 2);
   }
 
-  // 3. Если у нас есть такой язык — используем его, иначе — "en"
+  // 3. Если поддерживаем — используем его, иначе — "en"
   if (supportedLangs.includes(browserLang)) {
     return browserLang;
   }
@@ -421,28 +429,19 @@ function getInitialLanguage() {
   return "en";
 }
 
-
-
-
+// Применяем переводы к элементам на странице
 function applyTranslations(lang) {
-  const dict = translations[lang] || translations.ro;
+  const dict = translations[lang] || translations.en;
 
-  // Текстовые узлы по data-i18n
- document.querySelectorAll("[data-lang]").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lang = btn.getAttribute("data-lang");
-    if (!supportedLangs.includes(lang)) return;
-
-    // 1. Сохраняем выбор пользователя
-    localStorage.setItem("lang", lang);
-
-    // 2. Применяем язык
-    setLanguage(lang);
+  // 1. Обновляем все элементы с data-i18n
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
   });
-});
 
-
-  // Обновляем mailto-ссылки под язык
+  // 2. Обновляем mailto-ссылки
   const mailto = document.getElementById("mailto");
   if (mailto && dict._mailto_subject && dict._mailto_body) {
     const subject = encodeURIComponent(dict._mailto_subject);
@@ -456,52 +455,57 @@ function applyTranslations(lang) {
     const body = encodeURIComponent(dict._cta_body);
     ctaEmail.href = `mailto:studio.nica.md@gmail.com?subject=${subject}&body=${body}`;
   }
-
-  currentLang = lang;
-  try {
-    localStorage.setItem("nica_lang", lang);
-  } catch (e) {
-    // если localStorage недоступен — просто игнорируем
-  }
 }
 
-function setLang(lang) {
-  if (!translations[lang]) {
+// Основная функция: смена языка
+function setLanguage(lang) {
+  if (!supportedLangs.includes(lang)) {
     lang = getInitialLanguage();
-    //"ro";
   }
 
   // запоминаем выбор
   try {
-    localStorage.setItem("nica_lang", lang);
+    localStorage.setItem(STORAGE_KEY, lang);
   } catch (e) {}
 
   // применяем переводы
   applyTranslations(lang);
 
-  // синхронизируем селект
+  // опционально: подсветка активной кнопки языка
+  document.querySelectorAll("[data-lang]").forEach((btn) => {
+    if (btn.getAttribute("data-lang") === lang) {
+      btn.classList.add("active-lang");
+    } else {
+      btn.classList.remove("active-lang");
+    }
+  });
+
+  // если есть <select id="language-select"> — синхронизируем
   const select = document.getElementById("language-select");
   if (select) {
     select.value = lang;
   }
 }
 
+// Запуск после загрузки страницы
 document.addEventListener("DOMContentLoaded", () => {
-  // читаем сохранённый язык или RO по умолчанию"ro";
-  let saved = getInitialLanguage();
-  try {
-    saved = localStorage.getItem("nica_lang") || "en";
-  } catch (e) {}
+  const initialLang = getInitialLanguage();
+  setLanguage(initialLang);
 
-  // применяем переводы при загрузке
-  applyTranslations(saved);
+  // Кнопки/ссылки с data-lang="ro|ru|en"
+  document.querySelectorAll("[data-lang]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      setLanguage(lang);
+    });
+  });
 
-  // настраиваем селект
+  // Если используешь <select id="language-select">
   const select = document.getElementById("language-select");
   if (select) {
-    select.value = saved;
+    select.value = initialLang;
     select.addEventListener("change", (e) => {
-      setLang(e.target.value);
+      setLanguage(e.target.value);
     });
   }
 });
