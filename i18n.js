@@ -109,6 +109,7 @@ const translations = {
       "Predau surse și instrucțiuni de lansare.",
 
     // --- FOOTER ---
+    "chat.note":"Mesajele din acest chat pot fi transmise către Aurel, ca el să poată continua discuția cu tine fără să repeți totul.",
     footer: "© 2025 · NICA Academy · Creat cu ❤️ la Chișinău",
 
     // Mailto (parametri)
@@ -246,6 +247,7 @@ const translations = {
       "Передаю исходники и инструкцию по запуску.",
 
     // --- FOOTER ---
+    "chat.note":"Сообщения из этого чата могут быть переданы Аурелу, чтобы он мог продолжить разговор с вами без повторений.",
     footer:
       "© 2025 · NICA Academy · Создано с ❤️ в Кишинёве",
 
@@ -381,6 +383,7 @@ const translations = {
       "I deliver sources and launch instructions.",
 
     // --- FOOTER ---
+    "chat.note": "Messages from this chat may be shared with Aurel so he can continue the conversation with you without repeating everything.",
     footer:
       "© 2025 · NICA Academy · Created with ❤️ in Chișinău",
 
