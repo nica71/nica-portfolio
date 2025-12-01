@@ -446,14 +446,14 @@ function applyTranslations(lang) {
   if (mailto && dict._mailto_subject && dict._mailto_body) {
     const subject = encodeURIComponent(dict._mailto_subject);
     const body = encodeURIComponent(dict._mailto_body);
-    mailto.href = `mailto:studio.nica.md@gmail.com?subject=${subject}&body=${body}`;
+    mailto.href = `mailto:webartoptimus@gmail.com?subject=${subject}&body=${body}`;
   }
 
   const ctaEmail = document.getElementById("cta-email");
   if (ctaEmail && dict._cta_subject && dict._cta_body) {
     const subject = encodeURIComponent(dict._cta_subject);
     const body = encodeURIComponent(dict._cta_body);
-    ctaEmail.href = `mailto:studio.nica.md@gmail.com?subject=${subject}&body=${body}`;
+    ctaEmail.href = `mailto:webartoptimus@gmail.com?subject=${subject}&body=${body}`;
   }
 }
 
