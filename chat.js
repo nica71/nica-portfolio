@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.disabled = true;
 
     try {
-      const res = await fetch(`${backendUrl}/api/chat`, {
+      const res = await fetch(`${backendUrl}/api/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text }),
@@ -105,14 +105,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
       const reply =
         (data && (data.reply || data.answer || data.message)) ||
-        "Nu am un răspuns acum, încearcă să reformulezi întrebarea.";
+        "I don't have an answer right now, try rephraseing the question.";
 
       addMessageBubble("assistant", reply);
       pushMessage("assistant", reply);
     } catch (err) {
       console.error("Ошибка общения с backend:", err);
       const msg =
-        "A apărut o eroare la comunicarea cu serverul. Încearcă puțin mai târziu.";
+        "There was an error communicating with the server. Please try again later.";
       addMessageBubble("assistant", msg);
       pushMessage("assistant", msg);
     } finally {
