@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendBtn = document.getElementById("ai-chat-send");
   const heroBtn = document.getElementById("hero-ai-chat"); // может не быть
 
+
   // Если чего-то не хватает в DOM, просто выходим
   if (!toggle || !modal || !closeBtn || !bodyEl || !input || !sendBtn) {
     console.warn("AI chat: какие-то элементы не найдены в DOM.");
@@ -79,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
     pushMessage("user", text);
     input.value = "";
     input.focus();
-
+    // показываем "бот печатает..."
+  showTypingIndicator();
     if (!backendUrl) {
       const msg = "Backend indisponibil (nu este setat BACKEND_URL).";
       addMessageBubble("assistant", msg);
@@ -90,6 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
     isSending = true;
     sendBtn.disabled = true;
     input.disabled = true;
+
+
 
     try {
       const res = await fetch(`${backendUrl}/api/ask`, {
@@ -116,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
       addMessageBubble("assistant", msg);
       pushMessage("assistant", msg);
     } finally {
+          // убираем индикатор и показываем реальный ответ
+    hideTypingIndicator();
       isSending = false;
       sendBtn.disabled = false;
       input.disabled = false;
@@ -177,3 +183,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("NICA AI chat initialized.");
 });
+
+
+
+function showTypingIndicator() {
+  const body = document.getElementById("ai-chat-body");
+  if (!body) return;
+
+  // если уже есть индикатор — не дублируем
+  if (document.getElementById("ai-typing")) return;
+
+  const wrap = document.createElement("div");
+  wrap.id = "ai-typing";
+  wrap.className = "message bot"; // если у тебя есть класс для сообщений бота
+  wrap.innerHTML = `
+    <div class="ai-typing">
+      <span> Larisa AI</span>
+      <div class="ai-typing-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  `;
+
+  body.appendChild(wrap);
+  body.scrollTop = body.scrollHeight;
+}
+
+function hideTypingIndicator() {
+  const el = document.getElementById("ai-typing");
+  if (el && el.parentNode) {
+    el.parentNode.removeChild(el);
+  }
+}
